@@ -22,6 +22,13 @@ spec:
                 name: config
           ports:
             - containerPort: 80
+          volumeMounts:
+            - name: nginx-storage
+              mountPath: /usr/share/nginx/html
+      volumes:
+        - name: nginx-storage
+          persistentVolumeClaim:
+            claimName: example-pv-claim
 ---
 apiVersion: v1
 kind: Service
