@@ -2,4 +2,5 @@
 - `podman pull --platform linux/amd64 docker.io/nginx:latest`
 - `podman push docker.io/library/nginx docker.io/neotheprogramist/private:latest`
 - `kubectl create secret docker-registry regcred --docker-server docker.io --docker-username neotheprogramist --docker-password <password>`
+- `kubectl label namespaces neo istio-injection=enabled`
 - `kubectl apply -k k8s/patches/dev`
