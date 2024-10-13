@@ -1,5 +1,5 @@
 - `podman login docker.io --username neotheprogramist --password <password>`
-- `podman build -t example .`
-- `podman push localhost/example:latest docker.io/neotheprogramist/example:latest`
-- `kubectl -n example create secret docker-registry regcred --docker-server docker.io --docker-username neotheprogramist --docker-password <password>`
+- `podman pull --platform linux/amd64 docker.io/nginx:latest`
+- `podman push docker.io/library/nginx docker.io/neotheprogramist/private:latest`
+- `kubectl create secret docker-registry regcred --docker-server docker.io --docker-username neotheprogramist --docker-password <password>`
 - `kubectl apply -k k8s/patches/dev`
