@@ -3,9 +3,8 @@ kind: PersistentVolumeClaim
 metadata:
   name: example-pv-claim
 spec:
-  storageClassName: topolvm-provisioner
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 3Gi
+      storage: 1Gi
